@@ -38,6 +38,8 @@ modified: '2026-07-23'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/b2b-bank-domain-security.yml
 - type: Website
   url: https://b2bbank.com/en/index
 - type: LinkedIn
