@@ -1,0 +1,93 @@
+aid: b2b-bank
+name: B2B Bank
+review:
+  question: Does B2B Bank expose a first-party public developer portal or a downloadable public API?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    B2B Bank (b2bbank.com) is a Schedule I Canadian bank wholly owned by
+    Laurentian Bank of Canada, operating an intermediary-only, business-to-business
+    model that distributes deposits, loans, and mortgages through ~27,000
+    financial professionals rather than to retail consumers. It publishes NO
+    first-party developer portal and NO public API. The conventional developer
+    hostnames do not exist: developer.b2bbank.com and api.b2bbank.com both fail
+    to resolve (curl connect code 000, no DNS). The public website returns HTTP
+    200 but exposes only login-gated advisor/broker applications — Advisor
+    Access, EASE (online loans), Group Access, Investor Access, and online
+    banking — which are end-user portals, not developer surfaces. A full-text
+    scan of the homepage found zero occurrences of "developer", "open banking",
+    "Interac", "aggregator", "Flinks", "Plaid", "Swagger", or "OpenAPI"; the
+    only "api" substrings were third-party googleapis.com CDN references. No
+    OpenAPI/Swagger document is downloadable, so none was harvested.
+  charter:
+    type: Schedule I bank (domestic)
+    ownership: Wholly owned subsidiary of Laurentian Bank of Canada (Laurentian Bank Financial Group)
+    headquarters: Toronto, Ontario, Canada
+    depositInsurance: CDIC member
+    model: Business-to-business / intermediary-only (advisors, deposit and mortgage brokers, MFDA/CIRO members)
+  openFinancePosture:
+    firstPartyDeveloperPortal: false
+    downloadableOpenAPI: false
+    fdxParticipation: false
+    statedConsumerDrivenBankingPosition: false
+    interacOrRtrApi: false
+    aggregatorProgram: none-documented
+    note: |
+      Canada's federal Consumer-Driven Banking framework (Budget 2024 / Fall
+      Economic Statement 2024, overseen by the FCAC) is legislated but not yet
+      operational; access today is voluntary and fragmented. B2B Bank documents
+      no CDB/FDX position, no Interac data-sharing or Payments Canada Real-Time
+      Rail (RTR) developer API of its own, and no first-party aggregator program.
+      Any consumer data access would today occur, if at all, via third-party
+      aggregators through screen-based flows, not a documented first-party API.
+  authModel:
+    apiAuth: none-public
+    note: No public API means no documented OAuth2/OIDC, API-key, or mTLS developer authentication surface. Gated portals use human web login only.
+  specProvenance: none (no OpenAPI/Swagger harvested; no public specification exists)
+  probes:
+    - url: https://b2bbank.com
+      status: 200
+      note: Public marketing/advisor site; no developer content.
+    - url: https://www.b2bbank.com
+      status: 200
+      note: Same site (www).
+    - url: https://b2bbank.com/en/index
+      status: 200
+      note: Canonical English home.
+    - url: https://developer.b2bbank.com
+      status: 000
+      note: Does not resolve — no developer portal.
+    - url: https://api.b2bbank.com
+      status: 000
+      note: Does not resolve — no public API host.
+    - url: https://b2bbank.com/en/about-us/corporate-profile
+      status: 200
+      note: Confirms Schedule I charter, Laurentian ownership, intermediary model.
+    - url: https://ca.linkedin.com/company/b2b-bank
+      status: 200
+      note: Company LinkedIn page.
+  transports:
+    - protocol: REST
+      documented: false
+      note: No public REST API is documented.
+    - protocol: WebSocket
+      documented: false
+      note: No public WebSocket API is documented.
+sources:
+  - url: https://b2bbank.com/en/about-us/corporate-profile
+    type: Documentation
+    note: Corporate profile — Schedule I Canadian bank serving financial professionals; Laurentian Bank ownership; product lines.
+  - url: https://en.wikipedia.org/wiki/B2B_Bank
+    type: Reference
+    note: Founded 1991; became Schedule I bank and renamed B2B Bank on 2012-07-07; Toronto HQ; ~27,000 financial professionals.
+  - url: https://b2bbank.com/en/deposits/cdic-information
+    type: Documentation
+    note: CDIC deposit insurance membership.
+actions:
+  openapiHarvested: false
+  reason: |
+    No first-party developer portal and no downloadable public API/OpenAPI
+    exist for B2B Bank. This is an honest identity-only (built-stub) record for
+    an intermediary Schedule I bank whose digital surface is partner/advisor-gated.
