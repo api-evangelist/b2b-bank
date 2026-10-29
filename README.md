@@ -1,4 +1,4 @@
-# B2B Bank (b2b-bank)
+# B2B Bank
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,49 +64,83 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-B2B Bank is a Schedule I Canadian bank, headquartered in Toronto and wholly owned by Laurentian Bank of Canada (Laurentian Bank Financial Group). It runs a business-to-business, intermediary-only model — manufacturing and distributing banking products through a network of roughly 27,000 financial professionals (advisors and their dealerships, deposit and mortgage brokers and their firms, mutual fund and insurance manufacturers, and CIRO members) rather than serving retail consumers directly.
+B2B Bank is a Schedule I Canadian bank, headquartered in Toronto and wholly owned by Laurentian Bank of Canada (Laurentian Bank Financial Group). It operates a business-to-business, intermediary-only model: rather than serving retail consumers directly, it manufactures and distributes banking products through a network of roughly 27,000 financial professionals — financial advisors and their dealerships, deposit and mortgage brokers and their firms, mutual fund and insurance manufacturers, and CIRO (formerly MFDA/IIROC) members. Its product lines include investment loans, RSP and TFSA loans, broker deposits (GICs and high-interest savings/investment accounts), broker mortgages, and investment and banking accounts. The bank became a Schedule I bank and adopted the B2B Bank name in 2012, consolidating predecessor trust businesses (North American Trust, Sun Life Trust), and its deposits are CDIC insured. On open finance, B2B Bank publishes no first-party developer portal or public API: developer.b2bbank.com and api.b2bbank.com do not resolve, and the public site exposes only gated advisor/broker applications (Advisor Access, EASE online loans, Group Access, Investor Access, online banking). Canada's Consumer-Driven Banking framework is legislated but not yet operational, and the bank documents no FDX participation, Interac data-sharing API, or aggregator program of its own — consistent with an intermediary bank whose digital surface is partner-gated rather than developer-facing.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/b2b-bank/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/b2b-bank/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · Canada · Schedule I Bank · Broker Bank · Deposits · Mortgage · Lending
 
-## Tags
+## B2B Bank on APIs.io
 
-- Financial Services
-- Banking
-- Canada
-- Schedule I Bank
-- Broker Bank
-- Deposits
-- Mortgages
-- Lending
+Everything profiled for B2B Bank is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/b2b-bank/](https://apis.io/providers/b2b-bank/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Security (1)
 
-B2B Bank exposes **no public developer API**. There is no first-party developer portal — `developer.b2bbank.com` and `api.b2bbank.com` do not resolve (DNS failure), and the public website (`b2bbank.com`) surfaces only login-gated advisor and broker applications: Advisor Access, EASE (online loans), Group Access, Investor Access, and online banking. No downloadable OpenAPI/Swagger specification is published, so no specs were harvested.
+Authentication, trust centre, and vulnerability disclosure.
 
-## Open-Finance Posture
+- [B2B Bank Domain Security](https://apis.io/security/b2b-bank/b2b-bank-domain-security/)
 
-- **First-party developer portal:** None confirmed (developer/api subdomains do not resolve; 200-only responses come from gated advisor/broker portals, not developer APIs).
-- **Consumer-Driven Banking (CDB):** Canada's federal Consumer-Driven Banking framework (Budget 2024 / Fall Economic Statement 2024, overseen by the FCAC) is legislated but not yet operational. B2B Bank publishes no stated CDB or FDX position.
-- **Canadian rails:** No documented Interac data-sharing / verification API or Payments Canada Real-Time Rail (RTR) developer surface of its own is published.
-- **Aggregator access:** No first-party aggregator (Flinks, Plaid, MX, Salt Edge) program is documented. As an intermediary bank, its digital surface is partner- and advisor-gated rather than developer-facing.
+## Where to find this API
 
-This is an identity-only (built-stub) record: an honest "no public API" result for an intermediary Schedule I bank.
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://b2bbank.com/en/index)
-- [LinkedIn](https://ca.linkedin.com/company/b2b-bank)
 - [Support](https://b2bbank.com/en/contacts/index)
-- [Careers](https://b2bbank.com/en/careers/careers-at-b2b-bank)
-- [Terms of Service (Legal Notice)](https://b2bbank.com/en/legal/legal-notice)
-- [Privacy Policy (Laurentian Bank)](https://www.laurentianbank.ca/en/personal/privacy-and-security)
+- [Blog](https://b2bbank.com/blog/)
+- [Terms of service](https://b2bbank.com/en/legal/legal-notice)
+- [Privacy policy](https://www.laurentianbank.ca/en/personal/privacy-and-security)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 2.9** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.7** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/b2b-bank/](https://apis.io/providers/b2b-bank/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for B2B Bank: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/b2b-bank/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
